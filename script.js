@@ -12,6 +12,7 @@ function submitEmail() {
     } else {
         emailField.classList.remove('submit-error');
         errorMessageField.style.display = 'none';
+        goToSuccessPage();
     }
 
 }   
@@ -19,4 +20,20 @@ function submitEmail() {
 function checkIsValidEmail(email) {
     const regex = /@.*\.com$/;
     return regex.test(email);
-  }
+}
+
+function goToSuccessPage() {
+    var successTemplate = document.getElementById('success-template');
+    var submitEmailTemplate = document.getElementById('submit-email-template');
+
+    successTemplate.style.display = 'flex';
+    submitEmailTemplate.style.display = 'none';
+}
+
+function backToSendEmailPage() {
+    var successTemplate = document.getElementById('success-template');
+    var submitEmailTemplate = document.getElementById('submit-email-template');
+
+    successTemplate.style.display = 'none';
+    submitEmailTemplate.style.display = 'flex';
+}
