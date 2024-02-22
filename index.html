@@ -24,11 +24,13 @@
                     </ul>
 
                     <div class="form-area">
-                        <label> Email address </label>
-
+                        <div class="label-area">
+                            <label> Email address </label>
+                            <span id="error-massage"> Valid email required </span>
+                        </div>
                         <input type="email" id="email" placeholder="email@email.com">
 
-                        <button id="submit-email"> Subscribe to monthly newslatter </button>
+                        <button id="submit-email" onclick="submitEmail()"> Subscribe to monthly newslatter </button>
                     </div>
                 </div>
 

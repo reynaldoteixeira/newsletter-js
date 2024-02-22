@@ -52,10 +52,22 @@ html, body {
     margin-top: 16px;
 }
 
-.form-area label {
+.label-area {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 8px;
+}
+
+.form-area.label-area label {
     font-size: 11px;
     font-weight: 700;
-    margin-bottom: 8px;
+}
+
+#error-massage {
+    font-size: 11px;
+    font-weight: 700;
+    color: red;
+    display: none;
 }
 
 .form-area input {
@@ -88,4 +100,9 @@ html, body {
 
 .content-img img {
     height: 550px;
+}
+
+.submit-error {
+    border: 1px solid red !important;
+    background-color: hsl(0deg 100% 50% / 20%);
 }
